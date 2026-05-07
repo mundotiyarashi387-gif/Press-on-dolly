@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dolly's Nail Lounge</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.hero {
+  color: black !important;  /* apna heading wala color yaha daal do */
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#fff0f5;
+color:#222;
+}
+
+/* HEADER */
+
+header{
+background:#ffe4ec;
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+.logo{
+font-size:32px;
+font-weight:700;
+color:#ff4f81;
+}
+
+nav{
+display:flex;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#222;
+font-weight:500;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ff4f81;
+}
+
+/* HERO */
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1680540555907-c99c665a20b7?w=1200&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3xzZWFyY2h8MTF8fHBpbmslMjBuYWlsc3xlbnwwfHwwfHx8MA%3D%3D");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  text-align: center;
+  color: white;
+}
+
+.hero-content{
+max-width:650px;
+}
+
+.hero h1{
+font-size:60px;
+line-height:1.2;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:30px;
+line-height:1.8;
+}
+
+.hero-btns{
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.hero-btns a{
+text-decoration:none;
+padding:15px 28px;
+border-radius:12px;
+font-weight:600;
+}
+
+.buy{
+background:#ff4f81;
+color:white;
+}
+
+.call{
+background:white;
+color:#222;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+color:#ff4f81;
+}
+
+/* PRODUCTS */
+
+.products{
+padding:80px 6%;
+}
+
+.product-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:30px;
+}
+
+.product-card{
+background:#ffe4ec;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.3s;
+}
+
+.product-card:hover{
+transform:translateY(-10px);
+}
+
+.product-card img{
+width:100%;
+height:300px;
+object-fit:cover;
+}
+
+.product-info{
+padding:22px;
+}
+
+.product-info h3{
+margin-bottom:10px;
+font-size:24px;
+}
+
+.price{
+font-size:22px;
+font-weight:700;
+color:#ff4f81;
+margin-bottom:10px;
+}
+
+.size{
+margin-bottom:18px;
+font-weight:500;
+}
+
+.buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+}
+
+.buttons a{
+flex:1;
+text-align:center;
+padding:12px;
+border-radius:10px;
+text-decoration:none;
+font-weight:600;
+}
+
+.buy-btn{
+background:#ff4f81;
+color:white;
+}
+
+.call-btn{
+background:#222;
+color:white;
+}
+
+/* ABOUT */
+
+.about{
+background:#ffe4ec;
+width:90%;
+margin:15px auto;
+padding:2px 20px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+line-height:1.2;
+font-size:14px;
+}
+
+.about p{
+margin:0;
+padding:0;
+}
+
+/* SHIPPING */
+
+.shipping{
+padding:80px 6%;
+}
+
+.shipping-box{
+background:#ffe4ec;
+width:90%;
+margin:15px auto;
+padding:5px 20px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+line-height:1.3;
+font-size:14px;
+}
+
+.shipping-box p{
+margin:0;
+padding:3px 0;
+}
+
+/* CONTACT */
+.contact-box{
+background:#ffe4ec;
+width:90%;
+margin:15px auto;
+padding:15px 20px;
+border-radius:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.08);
+text-align:left;
+}
+
+.contact-item{
+display:block;
+margin:12px 0;
+font-size:15px;
+line-height:1.5;
+}
+
+.contact-item a{
+display:inline-block;
+color:#ff4f81;
+font-weight:600;
+text-decoration:none;
+margin-left:5px;
+}
+
+
+
+/* FOOTER */
+
+footer{
+background:#ff4f81;
+color:white;
+padding:50px 6%;
+text-align:center;
+}
+
+footer p{
+margin-top:10px;
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:65px;
+height:65px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:32px;
+text-decoration:none;
+color:white;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:40px;
+}
+
+nav{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+<div class="logo">
+Dolly's Nail Lounge
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#shipping">Shipping</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+<h1>🌼Welcome to My Website</h1>
+<p>Luxury 
+Press-On Nails✨️</p>
+<p><b>
+Premium aesthetic press-on nails with trendy pink luxury designs.
+Reusable, classy & perfect for every occasion🦋
+</b></p>
+
+
+  
+
+</section>
+
+<!-- PRODUCTS -->
+
+<section class="products" id="products">
+
+<h2 class="section-title">
+Our Nail Collection🪄
+</h2>
+
+<div class="product-grid">
+
+<!-- PRODUCT 1 -->
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?q=80&w=1000">
+
+<div class="product-info">
+
+<h3>Custom Press-On Nails</h3>
+
+<div class="price">
+Starts ₹600/-
+</div>
+
+<div class="size">
+Sizes: XS, S, M, L
+</div>
+
+
+
+
+</div>
+
+<!-- PRODUCT 2 -->
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?q=80&w=1000">
+
+<div class="product-info">
+
+<h3>Ready-Made Nails</h3>
+
+<div class="price">
+Starts ₹600/-
+</div>
+
+<div class="size">
+Sizes: XS, S, M, L
+</div>
+
+<div class="buttons">
+
+<a class="buy-btn"
+href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Ready-Made%20Nails">
+Buy Now
+</a>
+
+<a class="call-btn"
+href="tel:9137394563">
+Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 3 -->
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1000">
+
+<div class="product-info">
+
+<h3>Bridal Nails</h3>
+
+<div class="price">
+Starts ₹600/-
+</div>
+
+<div class="size">
+Sizes: XS, S, M, L
+</div>
+
+<div class="buttons">
+
+<a class="buy-btn"
+href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Bridal%20Nails">
+Buy Now
+</a>
+
+<a class="call-btn"
+href="tel:9137394563">
+Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 4 -->
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1610992015732-2449b76344bc?q=80&w=1000">
+
+<div class="product-info">
+
+<h3>Ready To Wear Nails</h3>
+
+<div class="price">
+Starts ₹600/-
+</div>
+
+<div class="size">
+Sizes: XS, S, M, L
+</div>
+
+<div class="buttons">
+
+<a class="buy-btn"
+href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Ready%20To%20Wear%20Nails">
+Buy Now
+</a>
+
+<a class="call-btn"
+href="tel:9137394563">
+Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 5 -->
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1632345031435-8727f6897d53?q=80&w=1000">
+
+<div class="product-info">
+
+<h3>Neon Nails</h3>
+
+<div class="price">
+Starts ₹600/-
+</div>
+
+<div class="size">
+Sizes: XS, S, M, L
+</div>
+
+<div class="buttons">
+
+<a class="buy-btn"
+href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Neon%20Nails">
+Buy Now
+</a>
+
+<a class="call-btn"
+href="tel:9137394563">
+Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- PRODUCT 6 -->
+
+<div class="product-card">
+
+<img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?q=80&w=1000">
+
+<div class="product-info">
+
+<h3>Colourful Designer Nails</h3>
+
+<div class="price">
+Starts ₹600/-
+</div>
+
+<div class="size">
+Sizes: XS, S, M, L
+</div>
+
+<div class="buttons">
+
+<a class="buy-btn"
+href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Colourful%20Designer%20Nails">
+Buy Now
+</a>
+
+<a class="call-btn"
+href="tel:9137394563">
+Call Now
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- BLUE GLITTER NAILS -->
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=1000">
+
+  <div class="product-info">
+
+    <h3>Blue Glitter Nails</h3>
+
+    <div class="price">Starts ₹600/-</div>
+
+    <div class="size">Sizes: XS, S, M, L</div>
+
+    <div class="buttons">
+
+      <a class="buy-btn"
+      href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Blue%20Glitter%20Nails">
+      Buy Now
+      </a>
+
+      <a class="call-btn" href="tel:9137394563">Call Now</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- PINK GLITTER NAILS -->
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1610992015732-2449b0e7a1c1?w=1000">
+
+  <div class="product-info">
+
+    <h3>Pink Glitter Nails</h3>
+
+    <div class="price">Starts ₹600/-</div>
+
+    <div class="size">Sizes: XS, S, M, L</div>
+
+    <div class="buttons">
+
+      <a class="buy-btn"
+      href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Pink%20Glitter%20Nails">
+      Buy Now
+      </a>
+
+      <a class="call-btn" href="tel:9137394563">Call Now</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- NUDE SHADE NAILS -->
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1600180758890-6b94519a8ba5?w=1000">
+
+  <div class="product-info">
+
+    <h3>Nude Shade Nails</h3>
+
+    <div class="price">Starts ₹600/-</div>
+
+    <div class="size">Sizes: XS, S, M, L</div>
+
+    <div class="buttons">
+
+      <a class="buy-btn"
+      href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Nude%20Shade%20Nails">
+      Buy Now
+      </a>
+
+      <a class="call-btn" href="tel:9137394563">Call Now</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- PRINTED NAILS -->
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1610992015814-2f9b9b5f3c2e?w=1000">
+
+  <div class="product-info">
+
+    <h3>Printed Nails</h3>
+
+    <div class="price">Starts ₹600/-</div>
+
+    <div class="size">Sizes: XS, S, M, L</div>
+
+    <div class="buttons">
+
+      <a class="buy-btn"
+      href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Printed%20Nails">
+      Buy Now
+      </a>
+
+      <a class="call-btn" href="tel:9137394563">Call Now</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- CHRISTMAS THEME NAILS -->
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1629198735660-3c4d1b7c8a11?w=1000">
+
+  <div class="product-info">
+
+    <h3>Christmas Theme Nails</h3>
+
+    <div class="price">Starts ₹600/-</div>
+
+    <div class="size">Sizes: XS, S, M, L</div>
+
+    <div class="buttons">
+
+      <a class="buy-btn"
+      href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Christmas%20Theme%20Nails">
+      Buy Now
+      </a>
+
+      <a class="call-btn" href="tel:9137394563">Call Now</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- FLORAL PRINT NAILS -->
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1000">
+
+  <div class="product-info">
+
+    <h3>Floral Print Nails</h3>
+
+    <div class="price">Starts ₹600/-</div>
+
+    <div class="size">Sizes: XS, S, M, L</div>
+
+    <div class="buttons">
+
+      <a class="buy-btn"
+      href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Floral%20Print%20Nails">
+      Buy Now
+      </a>
+
+      <a class="call-btn" href="tel:9137394563">Call Now</a>
+
+    </div>
+
+  </div>
+</div>
+
+<!-- SOFT TONE NAILS -->
+<div class="product-card">
+
+  <img src="https://images.unsplash.com/photo-1610992015771-2f9b9b5f3c2e?w=1000">
+
+  <div class="product-info">
+
+    <h3>Soft Tone Nails</h3>
+
+    <div class="price">Starts ₹600/-</div>
+
+    <div class="size">Sizes: XS, S, M, L</div>
+
+    <div class="buttons">
+
+      <a class="buy-btn"
+      href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20Soft%20Tone%20Nails">
+      Buy Now
+      </a>
+
+      <a class="call-btn" href="tel:9137394563">Call Now</a>
+
+    </div>
+
+  </div>
+</div>
+
+
+  
+
+<!-- ABOUT -->
+
+<section class="about">
+
+<h2 class="section-title">
+About Dolly's Nail Lounge🌼
+</h2>
+
+<p><b>
+We offer premium aesthetic press-on nails with trendy Barbie pink luxury designs.
+Our handmade nail collections are classy, reusable and perfect for every occasion.
+</b></p>
+
+</section>
+
+<!-- SHIPPING -->
+
+<section class="shipping" id="shipping">
+  <div class="shipping-box"
+
+<h2 class="section-title">
+Shipping & Return Policy
+</h2>
+
+
+<p><strong>🚚 All India Delivery:</strong> Yes</p>
+
+<p><strong>💸 Shipping Charges:</strong> ₹300</p>
+
+<p><strong>📦 Processing Time:</strong> 2–5 Working Days</p>
+
+<p><strong>🔁 Return / Refund Policy:</strong> No return or refund after order confirmation due to hygiene reasons.</p>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact" id="contact">
+  <div class="contact-box"
+
+<h2 class="section-title">
+Contact Us💌
+</h2>
+
+
+<p>
+  <div class="contact-item">
+📞 Contact Number: 
+<a href="tel:9137394563">
+9137394563
+</a>
+</div>
+</p>
+
+<p>
+<div class="contact-item">💬 WhatsApp:
+<a href="https://wa.me/919137394563">
+Chat on WhatsApp
+</a>
+</div>
+</p>
+
+<p>
+<div class="contact-item">📸 Instagram:
+<a href="https://www.instagram.com/dollysnaillounge?igsh=dHFjbWRtcm1pNm5r&utm_source=qr" target="_blank">
+@dollysnaillounge
+</a>
+</div>
+</p>
+
+<p>
+  <div class="contact-item"></div>
+📍Address<br>
+Shop no. 15, SHREEJI HEIGHTS, Palm Beach Rd,
+Sector-46/A, Sector 46 A, Seawoods,
+Navi Mumbai, Maharashtra 400706
+</div>
+</p>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>Dolly's Nail Lounge</h2>
+
+<p>
+Premium Barbie Pink Press-On Nails
+</p>
+
+<p>
+© 2026 Dolly's Nail Lounge. All Rights Reserved.
+</p>
+
+</footer>
+
+<!-- WHATSAPP FLOAT BUTTON -->
+
+<a class="whatsapp"
+href="https://wa.me/919137394563?text=Hi%20I%20want%20to%20order%20nails">
+💬
+</a>
+
+</body>
+</html>
