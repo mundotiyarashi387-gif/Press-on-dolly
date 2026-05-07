@@ -8,6 +8,52 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+  .product-card {
+  width: 250px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 15px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.product-info {
+  padding: 10px;
+  display: block;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.buy-btn, .call-btn {
+  flex: 1;
+  text-align: center;
+  padding: 8px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+.buy-btn {
+  background: black;
+}
+
+.call-btn {
+  background: green;
+}
 .buttons {
   display: flex;
   justify-content: center;
