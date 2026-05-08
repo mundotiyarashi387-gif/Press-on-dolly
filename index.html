@@ -8,6 +8,41 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+  font-family: 'Poppins', sans-serif;
+  .hero{
+  position:relative;
+}
+
+.hero::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.35);
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+}
+  .hero h1{
+  color:#ff4f93;
+}
+
+.hero p{
+  color:white;
+}
+  .logo{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  object-fit:cover;
+  display:block;
+  margin:15px auto;
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
+  }
   .shipping-box {
   margin-bottom: 0 !important;
   padding-bottom: 15px;
@@ -44,6 +79,8 @@
   margin: 15px;
   display: inline-block;
   vertical-align: top;
+  box-shadow:0 4px 15px rgba(0,0,0,0.15);
+    
 }
 
 .product-card img {
@@ -413,9 +450,9 @@ display:none;
 
 <header>
 
-<div class="logo">
-Dolly's Nail Lounge
-</div>
+<h1>Dolly's Nail Lounge</h1>
+
+<img src="IMG-20260506-WA0000.jpg" class="logo">
 
 <nav>
 <a href="#">Home</a>
@@ -431,13 +468,12 @@ Dolly's Nail Lounge
 <section class="hero">
 
 <div class="hero-content">
-<h1>🌼Welcome to My Website</h1>
-<p>Luxury 
-Press-On Nails✨️</p>
-<p><b>
-Premium aesthetic press-on nails with trendy pink luxury designs.
-Reusable, classy & perfect for every occasion🦋
-</b></p>
+
+
+<h1>Luxury Press-On Nails ✨</h1>
+
+<p>Handmade💫 | Reusable🔮| Trendy Designs💌</p>
+
 
 
   
@@ -900,6 +936,10 @@ Shipping & Return Policy
 </div>
 
 </section>
+  <div class="review-box">
+⭐️⭐️⭐️⭐️⭐️  
+“Very classy nails & amazing quality!”  
+  </div>
 
 <!-- CONTACT -->
 
